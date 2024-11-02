@@ -1,0 +1,30 @@
+.slick-dots {
+  padding-bottom: 35px;
+  width: auto;
+  margin-left: 3em;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.050);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+  background: blue;
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+.truncated-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* Muestra solo 3 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

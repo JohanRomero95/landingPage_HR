@@ -1,0 +1,12 @@
+.button {
+  padding-inline: 1em;
+  padding-block: 0.3em;
+  /* transition: transform 0.3s; */
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.040);
+  border-radius: 30px;
+  padding-inline: 1em;
+  padding-block: .5em;
+}
