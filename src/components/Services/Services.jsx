@@ -53,7 +53,13 @@ export default function Services() {
 			<div className="container mx-auto px-6">
 				<div className="grid md:grid-cols-3 gap-8">
 					{servicesData.map((service, index) => (
-						<ServiceCard key={index} {...service} />
+						<ServiceCard
+							key={index}
+							{...service}
+							animationClass={
+								index === 0 ? "animate-fade-in" : index === 2 ? "animate-bounce-in" : ""
+							}
+						/>
 					))}
 				</div>
 			</div>

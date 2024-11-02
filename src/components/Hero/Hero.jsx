@@ -1,3 +1,5 @@
+import ModalZcal from "../Modal/ModalZcal";
+
 export default function Hero() {
 	return (
 		<section className="relative h-[100dvh] flex items-center">
@@ -17,9 +19,10 @@ export default function Hero() {
 						Tenemos la convicción que el talento es el motor de <br />
 						cualquier organización exitosa.
 					</p>
-					<button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out">
+					{/* <button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out">
 						¡Hablemos!
-					</button>
+					</button> */}
+					<ModalZcal call="¡Hablemos!" />
 				</div>
 			</div>
 		</section>

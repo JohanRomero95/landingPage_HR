@@ -1,10 +1,11 @@
 import { useState, useEffect, forwardRef } from "react";
 import "../../styles/index.css";
+
 const Frase = forwardRef((props, ref) => {
 	const frases = [
 		"Estamos para ayudarte a crecer, ¿cómo podemos hacerlo?",
 		"Descubre nuevas oportunidades con nosotros.",
-		"Nuestro equipo está aquí para apoyarte.",
+		"Nuestro equipo está para apoyarte.",
 	];
 
 	const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);

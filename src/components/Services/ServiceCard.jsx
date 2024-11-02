@@ -36,7 +36,7 @@ export default function ServiceCard({ icon: Icon, title, description, more }) {
 				<button
 					onClick={openModal}
 					className="max-md:hidden w-fit bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out">
-					Learn More →
+					Leer mas →
 				</button>
 			</div>
 

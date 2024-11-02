@@ -3,6 +3,7 @@ import foto1 from "../../assets/photos/13053.jpg";
 import foto2 from "../../assets/photos/2148407516.jpg";
 import foto3 from "../../assets/photos/2148431344.jpg";
 import "./Information.css";
+import ModalZcal from "../Modal/ModalZcal";
 
 const photos = [foto1, foto2, foto3];
 
@@ -37,9 +38,10 @@ const Information = () => {
 						laboral, como a empresas que desean construir una cultura organizacional sólida,
 						con un equipo comprometido y alineado con su visión.
 					</p>
-					<button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out ">
+					<ModalZcal call="¡No esperes más!" />
+					{/* <button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out ">
 						¡No esperes más!
-					</button>
+					</button> */}
 				</div>
 				<div className="relative w-full h-[500px] overflow-hidden drop-shadow-lg">
 					<img
