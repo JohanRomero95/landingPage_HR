@@ -25,19 +25,19 @@ const Information = () => {
 
 	return (
 		<section className="relative top-[90px]">
-			<div className="flex items-stretch gap-4 px-[14em] py-24">
+			<div className="flex items-stretch gap-4 px-[6em] py-24">
 				<div className="w-[80%]">
-					<h1 className="text-6xl mb-10">
+					<h1 className="text-[65px] font-medium mb-10 animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out leading-tight">
 						El talento es <br />
 						nuestro foco
 					</h1>
-					<p className="mb-10">
+					<p className="mb-10 mr-16 text-lg">
 						Nos dedicamos a potenciar e impulsar el talento a través de asesorías
 						personalizadas tanto para individuos que buscan destacar en el competitivo mundo
 						laboral, como a empresas que desean construir una cultura organizacional sólida,
 						con un equipo comprometido y alineado con su visión.
 					</p>
-					<button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out ">
+					<button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out ">
 						¡No esperes más!
 					</button>
 				</div>
@@ -46,7 +46,7 @@ const Information = () => {
 						src={photos[currentIndex]}
 						alt=""
 						style={{ ...fadeStyle }}
-						className="absolute inset-0 w-full h-full rounded-2xl cursor-pointer"
+						className="absolute inset-0 w-full h-full rounded-2xl cursor-pointer object-cover"
 					/>
 				</div>
 			</div>

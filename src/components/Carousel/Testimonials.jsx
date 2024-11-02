@@ -57,7 +57,7 @@ const testimonials = [
 const NextArrow = ({ onClick }) => {
 	return (
 		<div
-			className="absolute bottom-0 right-[50px] transform -translate-y-1/2 border-[1px] hover:bg-slate-100 border-slate-300 text-slate-400 rounded-full cursor-pointer z-10 w-10 h-10 flex items-center justify-center"
+			className="absolute bottom-0 right-[50px] transform -translate-y-1/2 border-[1px] hover:bg-blue-600 hover:text-slate-100 transition-all duration-300 ease-in-out border-slate-300 text-slate-400 rounded-full cursor-pointer z-10 w-10 h-10 flex items-center justify-center"
 			onClick={onClick}>
 			➔
 		</div>
@@ -67,7 +67,7 @@ const NextArrow = ({ onClick }) => {
 const PrevArrow = ({ onClick }) => {
 	return (
 		<div
-			className="absolute bottom-0 right-[100px] transform -translate-y-1/2 border-[1px] hover:bg-slate-100 border-slate-300 text-slate-400 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer z-10 rotate-180"
+			className="absolute bottom-0 right-[100px] transform -translate-y-1/2 border-[1px] hover:bg-blue-600 hover:text-slate-100 transition-all duration-300 ease-in-out border-slate-300 text-slate-400 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer z-10 rotate-180"
 			onClick={onClick}>
 			➔
 		</div>

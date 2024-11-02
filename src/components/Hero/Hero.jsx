@@ -8,16 +8,16 @@ export default function Hero() {
 					className="w-full h-full object-cover brightness-50"
 				/>
 			</div>
-			<div className="container mx-auto px-6 relative z-10">
+			<div className="container mx-auto px-6 relative z-10 mt-56">
 				<div className="max-w-3xl text-white">
-					<h1 className="text-5xl font-bold mb-6">
+					<h1 className="text-6xl font-medium mb-28 animate-fade-up animate-once animate-duration-[1500ms] animate-ease-in-out">
 						Potenciamos tu talento, transformamos tu organización
 					</h1>
-					<p className="text-xl mb-8">
-						Tenemos la convicción que el talento es el motor de cualquier organización
-						exitosa.
+					<p className="text-xl mb-6">
+						Tenemos la convicción que el talento es el motor de <br />
+						cualquier organización exitosa.
 					</p>
-					<button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
+					<button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out">
 						¡Hablemos!
 					</button>
 				</div>
