@@ -36,13 +36,13 @@ function App() {
 	}, []);
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="min-h-screen bg-white" id="home">
 			<ScrollToTopButton />
 			<Navbar />
 			<div ref={(el) => blocksRef.current.push(el)} className="block">
 				<Hero />
 			</div>
-			<div ref={(el) => blocksRef.current.push(el)} className="block">
+			<div ref={(el) => blocksRef.current.push(el)} className="block" id="information">
 				<Information />
 			</div>
 			<div ref={(el) => blocksRef.current.push(el)} className="block" id="service">

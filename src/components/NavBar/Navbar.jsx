@@ -6,14 +6,14 @@ export default function Navbar() {
 		<nav className="fixed w-full bg-transparent backdrop-blur-lg z-50 shadow-sm pt-5">
 			<div className="container mx-auto px-6">
 				<div className="flex items-center justify-between rounded-2xl px-5 py-3 bg-white">
-					<div className="flex items-center gap-2" href="#">
+					<div className="flex items-center gap-2" href="#home">
 						<Users className="w-8 h-8 text-blue-600" />
 						<span className="text-xl font-bold text-gray-900">CeciUndurraga</span>
 					</div>
 
 					<div className="hidden md:flex items-center gap-10">
 						<a
-							href="#about"
+							href="#information"
 							className="button text-gray-600 mx-2 transition-all duration-300">
 							Acerca de
 						</a>
@@ -25,7 +25,7 @@ export default function Navbar() {
 						<a
 							href="#testimonials"
 							className="button text-gray-600 mx-2 transition-all duration-300">
-							Blog
+							Testimonios
 						</a>
 						<a
 							href="#contact"
