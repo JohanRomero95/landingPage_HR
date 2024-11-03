@@ -103,13 +103,13 @@ export default function Testimonials() {
 
 	return (
 		<section className="py-16 bg-gray-100" id="testimonials">
-			<div className="container mx-auto px-0">
+			<div className="container mx-auto px-0 cursor-grab">
 				<Slider {...settings}>
 					{testimonials.map((testimonial, index) => (
 						<div className="px-3" key={index}>
 							<article
 								onClick={() => handleCardClick(testimonial.link)}
-								className="rounded-3xl px-10 my-16 py-10 cursor-pointer mb-20 group">
+								className="rounded-3xl mx-10 my-16 py-10 cursor-pointer mb-20 group">
 								<header className="flex gap-3">
 									<img
 										src={testimonial.image}

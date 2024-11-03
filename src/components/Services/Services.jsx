@@ -10,9 +10,9 @@ const servicesData = [
 			"\n" +
 			"Aquí te ayudamos de manera concreta y simple a preparar algunos puntos claves.",
 		more: [
-			"Preparación para entrevistas laborales",
-			"Personal storytelling",
-			"Diseño y Optimización de CV y LinkedIn",
+			<strong>Preparación para entrevistas laborales</strong>,
+			<strong>Personal storytelling</strong>,
+			<strong>Diseño y Optimización de CV y LinkedIn</strong>,
 		],
 	},
 	{
@@ -22,13 +22,13 @@ const servicesData = [
 			"Apoyamos a las empresas con asesoría especializada y personalizada en formación y desarrollo de sus talentos porque sabemos el profundo impacto que esto genera en la cultura organizacional y el éxito a largo plazo.",
 		more: [
 			<>
-				<strong>Workshops:</strong> diseñamos talleres interactivos.
+				<strong>Workshops:</strong> Diseñamos talleres interactivos.
 			</>,
 			<>
-				<strong>Mentoría:</strong> trabajo personalizado en temáticas puntuales.
+				<strong>Mentoría:</strong> Trabajo personalizado en temáticas puntuales.
 			</>,
 			<>
-				<strong>Microlearning:</strong> desarrollamos contenido digital a tu medida para
+				<strong>Microlearning:</strong> Desarrollamos contenido digital a tu medida para
 				facilitar el aprendizaje continuo en lecciones breves y accesibles.
 			</>,
 		],
@@ -41,8 +41,8 @@ const servicesData = [
 			"\n" +
 			"Además, apoyamos con asesoría en áreas clave para asegurar la mejor experiencia durante el proceso de atracción, onboarding y retención del talento.",
 		more: [
-			"Diseño de la cultura organizacional.",
-			"Diseño del proceso de selección y onboarding.",
+			<strong>Diseño de la cultura organizacional.</strong>,
+			<strong>Diseño del proceso de selección y onboarding.</strong>,
 		],
 	},
 ];
@@ -55,10 +55,11 @@ export default function Services() {
 					{servicesData.map((service, index) => (
 						<ServiceCard
 							key={index}
+							index={index}
 							{...service}
-							animationClass={
-								index === 0 ? "animate-fade-in" : index === 2 ? "animate-bounce-in" : ""
-							}
+							// animationClass={
+							// 	index === 0 ? "animate-fade-in" : index === 2 ? "animate-bounce-in" : ""
+							// }
 						/>
 					))}
 				</div>

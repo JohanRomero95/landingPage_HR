@@ -29,3 +29,51 @@
 .animate-zoom-out {
   animation: zoomOut 0.3s ease-in forwards;
 }
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-middle {
+  animation: appear 1s ease-in-out forwards;
+}
+
+.animate-side-left {
+  animation: slide-in-left 1s ease-in-out forwards;
+}
+
+.animate-side-right {
+  animation: slide-in-right 1s ease-in-out forwards;
+}

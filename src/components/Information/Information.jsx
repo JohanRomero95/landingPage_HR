@@ -26,7 +26,7 @@ const Information = () => {
 
 	return (
 		<section className="relative top-[90px]">
-			<div className="flex items-stretch gap-4 px-[6em] py-24">
+			<div className="flex items-stretch gap-4 px-[13em] py-24">
 				<div className="w-[80%]">
 					<h1 className="text-[65px] font-medium mb-10 animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out leading-tight">
 						El talento es <br />

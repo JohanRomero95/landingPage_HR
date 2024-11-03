@@ -13,6 +13,10 @@ function App() {
 	const blocksRef = useRef([]);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
+	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -41,9 +45,8 @@ function App() {
 			<div ref={(el) => blocksRef.current.push(el)} className="block">
 				<Information />
 			</div>
-			<div ref={(el) => blocksRef.current.push(el)} className="block">
+			<div ref={(el) => blocksRef.current.push(el)} className="block" id="service">
 				<h2 className="text-4xl font-semibold text-center mt-32 text-gray-800h-10">
-					{/* Estamos para ayudarte a crecer, ¿cómo podemos hacerlo? */}
 					<Frase />
 				</h2>
 			</div>
