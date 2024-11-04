@@ -1,0 +1,67 @@
+/* @keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+} */
+
+/* .slide-in {
+  animation-name: slideIn;
+} */
+
+/* Animación de salida hacia la derecha */
+/* @keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+} */
+
+/* .slide-out {
+  animation-name: slideOut;
+} */
+
+/* Modal.css */
+/* .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  transform: translateX(100%);
+  animation: slide-in 0.5s forwards;
+} */
+
+/* @keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+} */
+
+.fragmento {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+}

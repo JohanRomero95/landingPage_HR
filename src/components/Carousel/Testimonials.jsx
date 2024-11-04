@@ -6,11 +6,11 @@ import "./Testimonials.css";
 
 const testimonials = [
 	{
-		name: "Sarah Johnson",
-		role: "HR Director, Tech Corp",
-		image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
+		name: "Cornelio Saavedra",
+		role: "Co-Founder Lidz | Proptech | Real estate services",
+		image: "https://media.licdn.com/dms/image/v2/C4E03AQEBTmyYOIwZIg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1536869870586?e=1736380800&v=beta&t=JW5AZD1kVoPzTMeJxTk-_V6_NyqBqJCpjZPDem4LwkM",
 		quote: "Working with HR Solutions transformed our recruitment process. We've seen a 40% improvement in employee retention since implementing their strategies.",
-		link: "#",
+		link: "https://www.linkedin.com/in/cornelio-saavedra-39256b53?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVcTLbcf9Rzuxe2qvoo8%2F7Q%3D%3D",
 	},
 
 	{
@@ -102,7 +102,7 @@ export default function Testimonials() {
 	};
 
 	return (
-		<section className="py-16 bg-gray-100" id="testimonials">
+		<section className="text-[16px] py-16 bg-gray-100" id="testimonials">
 			<div className="container mx-auto px-0 cursor-grab">
 				<Slider {...settings}>
 					{testimonials.map((testimonial, index) => (
@@ -116,14 +116,14 @@ export default function Testimonials() {
 										alt={testimonial.name}
 										className="w-14 h-14 rounded-full"
 									/>
-									<div className="mb-8">
+									<div className="mb-8 h-20">
 										<h3 className="text-lg font-semibold">{testimonial.name}</h3>
 										<p className="text-blue-600">{testimonial.role}</p>
 									</div>
 								</header>
 
 								<div>
-									<p className="text-gray-700 mb-10">"{testimonial.quote}"</p>
+									<p className="text-gray-700 mb-10 h-24">"{testimonial.quote}"</p>
 									<hr className="group-hover:border-blue-500 transition-colors duration-300" />
 								</div>
 							</article>

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Services.css";
 
 export default function ServiceCard({ icon: Icon, title, description, more, index }) {
+	let animationClass = "";
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [isClosing, setIsClosing] = useState(false);
 	const cardRef = useRef(null);
@@ -42,8 +43,6 @@ export default function ServiceCard({ icon: Icon, title, description, more, inde
 		};
 	}, []);
 
-	// Define la clase de animación según el índice de la tarjeta
-	let animationClass = "";
 	if (isVisible) {
 		if (index === 1) {
 			animationClass = "animate-middle";
@@ -58,7 +57,7 @@ export default function ServiceCard({ icon: Icon, title, description, more, inde
 		<>
 			<div
 				ref={cardRef}
-				className={`rounded-3xl shadow-md p-8 hover:shadow-xl cursor-pointer transition-shadow flex flex-col justify-between border-2 ${animationClass}`}>
+				className={`text-[16px] rounded-3xl shadow-md p-8 hover:shadow-xl cursor-pointer transition-shadow flex flex-col justify-between border-2 ${animationClass}`}>
 				<div className="mb-5">
 					<div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center mb-7">
 						<Icon className="w-6 h-6 text-white" />
@@ -75,15 +74,15 @@ export default function ServiceCard({ icon: Icon, title, description, more, inde
 				</div>
 				<button
 					onClick={openModal}
-					className="max-md:hidden w-fit bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out">
+					className="max-md:hidden shadow-lg w-fit bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out">
 					Leer más →
 				</button>
 			</div>
 
 			{isModalOpen && (
-				<div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+				<div className="text-[16px] fixed inset-0 flex items-center justify-center bg-white z-50">
 					<div
-						className={`bg-white rounded-lg p-8 max-w-xl w-full transform transition-transform duration-300 ${
+						className={`backdrop-blur-xl shadow-xl border-2 rounded-3xl p-8 max-w-xl w-full transform transition-transform duration-300 ${
 							isClosing ? "animate-zoom-out" : "animate-zoom-in"
 						}`}>
 						<div className="flex justify-between my-6 mx-5">
@@ -103,7 +102,7 @@ export default function ServiceCard({ icon: Icon, title, description, more, inde
 						<div className="flex justify-center">
 							<button
 								onClick={closeModal}
-								className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out">
+								className="max-md:hidden shadow-lg bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 ease-in-out">
 								Cerrar
 							</button>
 						</div>

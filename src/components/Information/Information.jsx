@@ -19,14 +19,14 @@ const Information = () => {
 				setCurrentIndex((prevIndex) => (prevIndex + 1) % photos.length);
 				setFadeStyle({ opacity: 1, transition: "opacity 1s ease-in-out" }); // Restablece la opacidad para la siguiente imagen
 			}, 1500); // Tiempo de desvanecimiento en ms
-		}, 6000); // Tiempo total entre cada cambio
+		}, 5000); // Tiempo total entre cada cambio
 
 		return () => clearInterval(interval);
 	}, []);
 
 	return (
-		<section className="relative top-[90px]">
-			<div className="flex items-stretch gap-4 px-[13em] py-24">
+		<section className="relative top-[90px] ">
+			<div className="flex items-stretch gap-4 px-[13em] py-28 xl:px-[9em]">
 				<div className="w-[80%]">
 					<h1 className="text-[65px] font-medium mb-10 animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out leading-tight">
 						El talento es <br />
@@ -39,9 +39,6 @@ const Information = () => {
 						con un equipo comprometido y alineado con su visión.
 					</p>
 					<ModalZcal call="¡No esperes más!" />
-					{/* <button className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out ">
-						¡No esperes más!
-					</button> */}
 				</div>
 				<div className="relative w-full h-[500px] overflow-hidden drop-shadow-lg">
 					<img

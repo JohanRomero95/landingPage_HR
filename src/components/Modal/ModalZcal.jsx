@@ -29,7 +29,7 @@ const ModalZcal = ({ call }) => {
 		<div>
 			<button
 				onClick={openModal}
-				className="max-md:hidden bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out">
+				className="max-md:hidden shadow-lg bg-blue-600 hover:bg-blue-700 hover:rounded-3xl text-white px-14 py-4 rounded-lg font-semibold transition-all duration-300 ease-in-out text-[16px]">
 				{call}
 			</button>
 

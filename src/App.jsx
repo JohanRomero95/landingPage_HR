@@ -11,6 +11,15 @@ import Frase from "./components/utils/Frase";
 
 function App() {
 	const blocksRef = useRef([]);
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
+	useEffect(() => {
+		scrollToTop(0, 0);
+	}, []);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -26,7 +35,7 @@ function App() {
 				});
 			},
 			{
-				threshold: 0.3, // 30% del elemento visible para activar la animación
+				threshold: 0.3,
 			},
 		);
 
