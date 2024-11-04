@@ -5,7 +5,7 @@ import ModalZcal from "../Modal/ModalZcal";
 export default function Footer() {
 	return (
 		<footer className="bg-gray-100 text-gray-300">
-			<div className="container mx-auto px-6 pb-12">
+			<div className="container mx-auto px-6 pb-12 sm:px-12">
 				<ModalZcal call="¡Conversemos!" />
 				<hr className="border-gray-600 my-8" />
 

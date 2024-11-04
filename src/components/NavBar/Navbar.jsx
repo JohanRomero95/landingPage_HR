@@ -2,6 +2,7 @@ import { Users } from "lucide-react";
 import "./Navbar.css";
 import ModalZcal from "../Modal/ModalZcal";
 import { useState } from "react";
+import Modal from "../Modal/Modal";
 
 export default function Navbar() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,6 +60,7 @@ export default function Navbar() {
 						¡Hablemos!
 					</button> */}
 					<ModalZcal call="¡Hablemos!" />
+					{/* <Modal /> */}
 					<button className="md:hidden p-2 text-gray-600 hover:text-blue-600 hover:rounded-3xl px-5 py-2  transition-colors">
 						<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path

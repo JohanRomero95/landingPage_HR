@@ -17,10 +17,8 @@ function App() {
 			behavior: "smooth",
 		});
 	};
-	useEffect(() => {
-		scrollToTop(0, 0);
-	}, []);
 
+	// Scroll al principio de la página cuando se carga o actualiza
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -35,7 +33,7 @@ function App() {
 				});
 			},
 			{
-				threshold: 0.3,
+				threshold: 0.5,
 			},
 		);
 
