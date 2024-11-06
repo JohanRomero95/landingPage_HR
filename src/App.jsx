@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
 import Footer from "./components/Footer/Footer";
 import Information from "./components/Information/Information";
 import Testimonials from "./components/Carousel/Testimonials";
 import ScrollToTopButton from "./components/utils/ScrollToTopButton";
-import "./styles/index.css";
+import NavBar from "./components/NavBar/Navbar";
 import Frase from "./components/utils/Frase";
 import WhatsAppButton from "./components/utils/Whatsapp";
+import "./styles/index.css";
 
 function App() {
 	const blocksRef = useRef([]);
@@ -46,7 +46,7 @@ function App() {
 	return (
 		<div className="min-h-screen bg-white" id="home">
 			<ScrollToTopButton />
-			<Navbar />
+			<NavBar />
 			<div ref={(el) => blocksRef.current.push(el)} className="block">
 				<Hero />
 			</div>
