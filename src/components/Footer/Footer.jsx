@@ -10,7 +10,7 @@ export default function Footer() {
 				<hr className="border-gray-600 my-8" />
 
 				<div className="flex flex-col md:flex-row justify-between items-center">
-					<div className="flex space-x-4 justify-center items-center">
+					<div className="flex space-x-4 justify-center items-center xs:mb-5">
 						<a href="https://www.instagram.com/ceciundurraga/" target="_blank">
 							<FaInstagram className="text-2xl text-gray-600 hover:text-amber-900 transition-all duration-300 ease-in-out" />
 						</a>

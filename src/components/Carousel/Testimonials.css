@@ -28,3 +28,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@media (min-width: 320px) and (max-width: 647px) {
+  .slick-dots {
+    margin-left: 1.5em;
+  }
+}

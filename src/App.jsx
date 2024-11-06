@@ -8,6 +8,7 @@ import Testimonials from "./components/Carousel/Testimonials";
 import ScrollToTopButton from "./components/utils/ScrollToTopButton";
 import "./styles/index.css";
 import Frase from "./components/utils/Frase";
+import WhatsAppButton from "./components/utils/Whatsapp";
 
 function App() {
 	const blocksRef = useRef([]);
@@ -33,7 +34,7 @@ function App() {
 				});
 			},
 			{
-				threshold: 0.5,
+				threshold: 0.2,
 			},
 		);
 
@@ -53,7 +54,7 @@ function App() {
 				<Information />
 			</div>
 			<div ref={(el) => blocksRef.current.push(el)} className="block" id="service">
-				<h2 className="text-4xl font-semibold text-center mt-32 text-gray-800h-10">
+				<h2 className="text-4xl font-semibold text-center mt-32 xs:mt-8 text-gray-800 h-10 xs:h-32 xs:px-[.6em] md:px-[1em]">
 					<Frase />
 				</h2>
 			</div>
@@ -64,6 +65,7 @@ function App() {
 				<Testimonials />
 			</div>
 			<Footer />
+			<WhatsAppButton />
 		</div>
 	);
 }

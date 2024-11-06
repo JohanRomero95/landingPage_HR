@@ -59,14 +59,16 @@ export default function ServiceCard({ icon: Icon, title, description, more, inde
 				ref={cardRef}
 				className={`text-[16px] rounded-3xl shadow-md p-8 hover:shadow-xl cursor-pointer transition-shadow flex flex-col justify-between border-2 ${animationClass}`}>
 				<div className="mb-5">
-					<div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center mb-7">
-						<Icon className="w-6 h-6 text-white" />
+					<div className="md:flex md:content-center md:gap-3 xl:flex-col">
+						<div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center mb-7">
+							<Icon className="w-6 h-6 text-white" />
+						</div>
+						<div className="h-[64px] mb-5 xs:mb-0">
+							<h3 className="text-2xl xs:text-xl font-bold text-gray-800">{title}</h3>
+						</div>
 					</div>
-					<div className="h-[64px] mb-5">
-						<h3 className="text-2xl font-bold text-gray-800">{title}</h3>
-					</div>
-					<p className="text-gray-600 mb-5 whitespace-pre-line">{description}</p>
-					<ul className="text-gray-600 list-disc list-inside space-y-1 mb-6">
+					<p className="text-gray-600 xs:text-sm mb-5 whitespace-pre-line">{description}</p>
+					<ul className="text-gray-600 list-disc list-inside space-y-1 mb-6 xs:text-sm">
 						{more.map((item, idx) => (
 							<li key={idx}>{item}</li>
 						))}

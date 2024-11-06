@@ -51,7 +51,7 @@ export default function Services() {
 	return (
 		<section className="py-20" id="services">
 			<div className="container mx-auto px-6">
-				<div className="grid md:grid-cols-3 gap-8">
+				<div className="grid md:grid-cols-1 xl:grid-cols-3 gap-8">
 					{servicesData.map((service, index) => (
 						<ServiceCard
 							key={index}

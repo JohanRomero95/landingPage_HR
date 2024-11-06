@@ -56,7 +56,7 @@ const ModalZcal = ({ call }) => {
 							title="Zcal Schedule"></iframe>
 						<button
 							onClick={closeModal}
-							className="flex items-center justify-center absolute top-[50%] -right-10 text-gray-500 hover:text-gray-700 hover:bg-gray-200 bg-slate-100 rounded-full h-16 w-16 text-xl">
+							className="flex items-center justify-center absolute xs:top-[20%] lg:top-[50%] xs:right-10 md:right-20 md:top-56 -right-10 text-gray-500 hover:text-gray-700 hover:bg-gray-200 bg-slate-100 rounded-full h-16 w-16 xs:h-10 xs:w-10 text-xl">
 							X
 						</button>
 					</div>
