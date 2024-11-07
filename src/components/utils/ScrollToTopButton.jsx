@@ -3,14 +3,12 @@ import { useEffect, useState } from "react";
 export default function ScrollToTopButton() {
 	const [isVisible, setIsVisible] = useState(false);
 
-	// Función para manejar el desplazamiento a la parte superior de la página
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
 	useEffect(() => {
 		const handleScroll = () => {
-			// Determina la altura del documento y la posición de desplazamiento
 			const scrolled = window.scrollY;
 			const windowHeight = window.innerHeight;
 			const documentHeight = document.documentElement.scrollHeight;
@@ -23,10 +21,8 @@ export default function ScrollToTopButton() {
 			}
 		};
 
-		// Agrega el event listener para el scroll
 		window.addEventListener("scroll", handleScroll);
 
-		// Elimina el event listener al desmontar el componente
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 

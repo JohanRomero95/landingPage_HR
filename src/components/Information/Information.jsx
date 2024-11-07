@@ -1,15 +1,33 @@
 import { useState, useEffect } from "react";
-import foto1 from "../../assets/photos/13053.jpg";
-import foto2 from "../../assets/photos/2148407516.jpg";
+import foto1 from "../../assets/photos/13053.webp";
+import foto2 from "../../assets/photos/liviana1.webp";
 import foto3 from "../../assets/photos/2148431344.jpg";
+import foto4 from "../../assets/photos/2149328316_liviana.webp";
 import "./Information.css";
 import ModalZcal from "../Modal/ModalZcal";
 
-const photos = [foto1, foto2, foto3];
+const photos = [foto1, foto2, foto3, foto4];
 
 const Information = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [fadeStyle, setFadeStyle] = useState({ opacity: 1, transition: "opacity 2s ease-in-out" });
+	const [isModalVisible, setIsModalVisible] = useState(true);
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth < 768) {
+				setIsModalVisible(false);
+			} else {
+				setIsModalVisible(true);
+			}
+		};
+
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -17,9 +35,9 @@ const Information = () => {
 
 			setTimeout(() => {
 				setCurrentIndex((prevIndex) => (prevIndex + 1) % photos.length);
-				setFadeStyle({ opacity: 1, transition: "opacity 1s ease-in-out" }); // Restablece la opacidad para la siguiente imagen
-			}, 2500); // Tiempo de desvanecimiento en ms
-		}, 5000); // Tiempo total entre cada cambio
+				setFadeStyle({ opacity: 1, transition: "opacity 1s ease-in-out" }); //
+			}, 2500);
+		}, 5000);
 
 		return () => clearInterval(interval);
 	}, []);
@@ -38,12 +56,14 @@ const Information = () => {
 						laboral, como a empresas que desean construir una cultura organizacional sólida,
 						con un equipo comprometido y alineado con su visión.
 					</p>
-					{/* <ModalZcal call="¡No esperes más!" /> */}
+					{isModalVisible && <ModalZcal call="¡No esperes más!" />}
 				</div>
 				<div className="relative w-full xl:h-[500px] overflow-hidden drop-shadow-lg xs:h-[300px] lg:h-[400px]">
 					<img
 						src={photos[currentIndex]}
-						alt=""
+						alt="HR | People & Culture"
+						title="HR | People & Culture"
+						loading="lazy"
 						style={{ ...fadeStyle }}
 						className="absolute inset-0 w-full h-full rounded-2xl cursor-pointer object-cover"
 					/>

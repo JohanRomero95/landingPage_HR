@@ -13,14 +13,13 @@ const Frase = forwardRef((props, ref) => {
 
 	useEffect(() => {
 		const phraseInterval = setInterval(() => {
-			// Cambia de frase
-			setFadeClass(""); // Quita la clase de animación temporalmente
+			setFadeClass("");
 			setTimeout(() => {
 				setCurrentPhraseIndex((prevIndex) =>
 					prevIndex === frases.length - 1 ? 0 : prevIndex + 1,
 				);
-				setFadeClass("fade-in-up"); // Vuelve a agregar la clase de animación
-			}, 1000); // Pequeño retardo para reiniciar la animación
+				setFadeClass("fade-in-up"); //
+			}, 1000);
 		}, 5000);
 
 		return () => clearInterval(phraseInterval);

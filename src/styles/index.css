@@ -15,6 +15,7 @@
 
 html {
   scroll-padding-top: 130px;
+  scroll-behavior: smooth;
 }
 
 @keyframes appear {

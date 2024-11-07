@@ -16,14 +16,14 @@ const testimonials = [
 	{
 		name: "Eleonora Martelli Vergara",
 		role: "Periodista, Jefe de Servicios Generales",
-		image: "https://media.licdn.com/dms/image/v2/D4E03AQGzWKYm1fqPuw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720545404843?e=1736380800&v=beta&t=AKB7W6xZ52MTcPiOX1-zSmZNDGZ5EQebm2Qminz758c",
+		image: "https://media.licdn.com/dms/image/v2/D4D03AQEM50_pYpCaXA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730895700211?e=1736380800&v=beta&t=oIWxRb7nyvHW8WuvhHgOqM9m9cNfRC-pmF77mV2bW5M",
 		quote: "Su enfoque personalizado me ayudó no solo a estructurar mi discurso y mi CV, sino también resaltar las fortalezas clave de mi personalidad, orientándome hacia los cargos a los que me gustaría postular en el futuro. Su conocimiento y dedicación me dieron la confianza para enfrentar las entrevistas con seguridad.",
 		link: "https://www.linkedin.com/in/eleonora-martelli-vergara-044b10212/",
 		// "Trabajar con la Ceci fue una experiencia increíble. Su enfoque personalizado me ayudó no solo a estructurar mi discurso y mejorar mi CV, sino también a resaltar las fortalezas clave de mi personalidad, orientándome hacia los cargos a los que me gustaría postular en el futuro. Su conocimiento y dedicación me dieron la confianza necesaria para enfrentar las entrevistas con seguridad. Recomiendo sus servicios a cualquiera que quiera dar el siguiente paso en su carrera."
 	},
 	{
 		name: "Raimundo Zalaquett",
-		role: "Ingeniero Comercial, Business Developement Inversiones, Estrategia, Startups",
+		role: "Ingeniero Comercial, Business Development Inversiones, Estrategia, Startups",
 		image: "https://media.licdn.com/dms/image/v2/D4E03AQFXzTDC7tO5Vg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1669222750670?e=1736380800&v=beta&t=wMA9JtnSThYh_CcJLNAQDuf716eg-6G7SqR09AqXJKI",
 		quote: "Ceci, una genia. Su experiencia y asertividad me ayudaron a construir un relato sólido de mi carrera profesional, sobre todo siendo de un nicho bastante específico",
 		link: "https://www.linkedin.com/in/raimundozalaquett?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BI8xxDfvSRmufil32my28Aw%3D%3D",
@@ -56,6 +56,8 @@ const NextArrow = ({ onClick }) => {
 	return (
 		<div
 			className="absolute bottom-0 right-[50px] xs:right-6 transform -translate-y-1/2 border-[1px] hover:bg-blue-600 hover:text-slate-100 transition-all duration-300 ease-in-out border-slate-300 text-slate-400 rounded-full cursor-pointer z-10 w-10 h-10 flex items-center justify-center"
+			alt="Botón slider derecha"
+			title="Botón slider derecha"
 			onClick={onClick}>
 			➔
 		</div>
@@ -66,6 +68,8 @@ const PrevArrow = ({ onClick }) => {
 	return (
 		<div
 			className="absolute bottom-0 right-[100px] xs:right-[70px] transform -translate-y-1/2 border-[1px] hover:bg-blue-600 hover:text-slate-100 transition-all duration-300 ease-in-out border-slate-300 text-slate-400 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer z-10 rotate-180"
+			alt="Botón slider izquierdo"
+			title="Botón slider izquierdo"
 			onClick={onClick}>
 			➔
 		</div>
@@ -120,9 +124,11 @@ export default function Testimonials() {
 										src={testimonial.image}
 										alt={testimonial.name}
 										className="w-14 h-14 rounded-full"
+										title={testimonial.name}
+										loading="lazy"
 									/>
 									<div className="mb-8 h-20">
-										<h3 className="text-lg font-semibold">{testimonial.name}</h3>
+										<p className="text-lg font-semibold">{testimonial.name}</p>
 										<p className="text-blue-600 lg:text-xs xl:text-base">
 											{testimonial.role}
 										</p>

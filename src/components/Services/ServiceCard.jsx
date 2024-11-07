@@ -64,7 +64,7 @@ export default function ServiceCard({ icon: Icon, title, description, more, inde
 							<Icon className="w-6 h-6 text-white" />
 						</div>
 						<div className="h-[64px] mb-5 xs:mb-0">
-							<h3 className="text-2xl xs:text-xl font-bold text-gray-800">{title}</h3>
+							<h2 className="text-2xl xs:text-xl font-bold text-gray-800">{title}</h2>
 						</div>
 					</div>
 					<p className="text-gray-600 xs:text-sm mb-5 whitespace-pre-line">{description}</p>
@@ -88,7 +88,7 @@ export default function ServiceCard({ icon: Icon, title, description, more, inde
 							isClosing ? "animate-zoom-out" : "animate-zoom-in"
 						}`}>
 						<div className="flex justify-between my-6 mx-5">
-							<h3 className="text-2xl font-bold text-gray-800 w-80">{title}</h3>
+							<h2 className="text-2xl font-bold text-gray-800 w-80">{title}</h2>
 							<button
 								onClick={closeModal}
 								className="text-gray-500 hover:text-gray-700 hover:bg-gray-200 h-10 w-10 rounded-full transition-all duration-300 ease-in-out bg-slate-100">
