@@ -14,16 +14,16 @@ export default function Hero() {
 				/>
 			</div>
 			<div className="container mx-auto px-6 relative z-10 mt-48">
-				<div className="max-w-3xl text-gray-800">
+				<div className="max-w-3xl text-gray-900">
 					<h1 className="text-[70px] leading-tight font-medium mb-28 animate__animated animate__fadeInUp animate__slower xxs:text-[22px] xs:text-5xl xs:mb-10 xs:-mt-20 lg:mb-20">
 						Potenciamos tu talento, transformamos tu organización
 					</h1>
-					<p className="text-xl mb-6 animate__animated animate__fadeInUp animate__slower max-sm:text-base w-[500px] xs:w-44 xs:mb-10 xs:text-lg">
+					<p className="text-xl mb-6 text-gray-600 animate__animated animate__fadeInUp animate__slower max-sm:text-base w-[500px] xs:w-44 xs:mb-10 xs:text-lg">
 						Tenemos la convicción que el talento es el motor de cualquier organización
 						exitosa.
 					</p>
 
-					<ModalZcal call="¡Hablemos!" />
+					<ModalZcal call="¡Agenda una reunión!" />
 				</div>
 			</div>
 		</section>

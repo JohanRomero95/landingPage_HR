@@ -4,8 +4,8 @@ import "../../styles/index.css";
 const Frase = forwardRef((props, ref) => {
 	const frases = [
 		"Estamos para ayudarte a crecer, ¿cómo podemos hacerlo?",
-		"Descubre nuevas oportunidades con nosotros.",
-		"Nuestro equipo está para apoyarte.",
+		"Descubre cómo impulsar la cultura de tu empresa.",
+		"Nos dedicamos a potenciar el talento.",
 	];
 
 	const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);

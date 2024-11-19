@@ -19,7 +19,6 @@ function App() {
 		});
 	};
 
-	// Scroll al principio de la página cuando se carga o actualiza
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -54,7 +53,7 @@ function App() {
 				<Information />
 			</div>
 			<div ref={(el) => blocksRef.current.push(el)} className="block" id="service">
-				<h2 className="text-4xl font-semibold text-center mt-32 xs:mt-8 text-gray-800 h-10 xs:h-32 xs:px-[.6em] md:px-[1em]">
+				<h2 className="text-4xl font-semibold text-center mt-32 xs:mt-8 text-gray-900 h-10 xs:h-32 xs:px-[.6em] md:px-[1em]">
 					<Frase />
 				</h2>
 			</div>

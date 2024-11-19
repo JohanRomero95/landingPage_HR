@@ -31,7 +31,7 @@ const ModalZcal = ({ call }) => {
 			className="fixed inset-0 bg-black/50 flex items-center justify-center z-[10000]"
 			onClick={closeModal}>
 			<div
-				className={`bg-white rounded-3xl w-[90%] max-w-[55%] xs:max-w-[90%] md:max-w-[1100px] md:h-[98%] h-[92%] flex flex-col relative overflow-hidden ${
+				className={`bg-white rounded-3xl w-[90%] max-w-[55%] xs:max-w-[90%] md:max-w-[1100px] md:h-[98%] h-[94%] flex flex-col relative overflow-hidden ${
 					isClosing ? "animate-zoom-out" : "animate-zoom-in"
 				}`}
 				onClick={(e) => e.stopPropagation()}>
@@ -62,7 +62,7 @@ const ModalZcal = ({ call }) => {
 			{/* Botón para abrir el modal */}
 			<button
 				onClick={openModal}
-				className="max-md:hidden shadow-lg bg-blue-600 hover:bg-blue-700 text-white px-14 py-4 rounded-lg hover:rounded-3xl font-semibold transition-all duration-300 ease-in-out text-[16px]">
+				className="max-md:hidden shadow-lg bg-blue-600 hover:bg-blue-700 text-white px-14 py-4 rounded-lg hover:rounded-3xl font-semibold transition-all duration-300 ease-in-out text-[16px] xs:px-6 xs:py-3">
 				{call}
 			</button>
 

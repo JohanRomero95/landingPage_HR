@@ -4,11 +4,22 @@ import foto2 from "../../assets/photos/liviana1.webp";
 import foto3 from "../../assets/photos/2148431344.jpg";
 import foto4 from "../../assets/photos/2149328316_liviana.webp";
 import "./Information.css";
-import ModalZcal from "../Modal/ModalZcal";
+// import ModalZcal from "../Modal/ModalZcal";
+import ModalForm from "../Modal/ModalForm";
 
 const photos = [foto1, foto2, foto3, foto4];
 
 const Information = () => {
+	// const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleOpenModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+	};
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [fadeStyle, setFadeStyle] = useState({ opacity: 1, transition: "opacity 2s ease-in-out" });
 	const [isModalVisible, setIsModalVisible] = useState(true);
@@ -46,17 +57,22 @@ const Information = () => {
 		<section className="relative top-[90px] xs:top-0 xs:px-6">
 			<div className="xs:flex-col flex items-stretch gap-4 py-28 xs:py-14 md:py-14 md:px-[2em] lg:px-[2em] xl:px-[6em] 2xl:px-[13em]">
 				<div className="w-[80%] xs:w-full">
-					<h1 className="text-[65px] font-medium mb-10 animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out leading-tight xs:text-4xl xs:w-fit xs:mb-5 md:text-5xl">
+					<h1 className="text-[65px] text-gray-900 font-semibold mb-10 animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out leading-tight xs:text-4xl xs:w-fit xs:mb-5 md:text-5xl">
 						El talento es <br />
 						nuestro foco
 					</h1>
-					<p className="mb-10 mr-16 text-lg xs:text-base xs:mb-5 xs:mr-0 md:text-lg md:mr-2">
+					<p className="mb-10 mr-16 text-lg xs:text-base text-gray-600 xs:mb-5 xs:mr-0 md:text-base lg:text-lg md:mr-2">
 						Nos dedicamos a potenciar e impulsar el talento a través de asesorías
 						personalizadas tanto para individuos que buscan destacar en el competitivo mundo
 						laboral, como a empresas que desean construir una cultura organizacional sólida,
 						con un equipo comprometido y alineado con su visión.
 					</p>
-					{isModalVisible && <ModalZcal call="¡No esperes más!" />}
+					{isModalVisible && <ModalForm isOpen={isModalOpen} onClose={handleCloseModal} />}
+					<button
+						onClick={handleOpenModal}
+						className="max-md:hidden shadow-lg bg-blue-600 hover:bg-blue-700 text-white px-14 py-4 rounded-lg hover:rounded-3xl font-semibold transition-all duration-300 ease-in-out text-[16px] xs:hidden">
+						¡No esperes más!
+					</button>
 				</div>
 				<div className="relative w-full xl:h-[500px] overflow-hidden drop-shadow-lg xs:h-[300px] lg:h-[400px]">
 					<img
@@ -65,7 +81,7 @@ const Information = () => {
 						title="HR | People & Culture"
 						loading="lazy"
 						style={{ ...fadeStyle }}
-						className="absolute inset-0 w-full h-full rounded-2xl cursor-pointer object-cover"
+						className="absolute inset-0 w-full h-full rounded-3xl cursor-pointer object-cover "
 					/>
 				</div>
 			</div>

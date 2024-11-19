@@ -2,6 +2,8 @@ import { Users } from "lucide-react";
 import "./Navbar.css";
 import { useState } from "react";
 import ModalForm from "../Modal/ModalForm";
+import logo from "../../assets/photos/CU_logo.png";
+import logo2 from "../../assets/photos/favicon.webp";
 
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +13,6 @@ export default function Navbar() {
 		setIsModalOpen(true);
 	};
 
-	// Función para cerrar el modal
 	const handleCloseModal = () => {
 		setIsModalOpen(false);
 	};
@@ -32,36 +33,36 @@ export default function Navbar() {
 			<div className="container mx-auto px-6">
 				<div className="flex items-center justify-between rounded-2xl px-5 py-3 bg-white shadow-2xl">
 					<div
-						className="flex items-center gap-2"
+						className="flex w-52 xs:w-40 sm:w-36 items-center gap-2"
 						onClick={scrollToTop}
 						style={{ cursor: "pointer" }}>
-						<Users className="w-8 h-8 text-blue-600" alt="Logotipo" title="Logotipo" />
-						<span
-							className="text-xl font-bold text-gray-900 md:text-md"
-							alt="Ceci Undurraga"
-							title="Ceci Undurraga">
-							CeciUndurraga
-						</span>
+						<img
+							src={logo2}
+							className="w-7 h-7 xs:w-6 xs:h-6"
+							alt="Logotipo"
+							title="Logotipo"
+						/>
+						<img src={logo} alt="Ceci Undurraga" title="Ceci Undurraga" />
 					</div>
 
-					<div className="xs:hidden items-center gap-10 md:gap-0 md:flex">
+					<div className="xs:hidden items-center md:gap-0 lg:gap-10 md:flex">
 						<a
 							href="#information"
-							className="button text-gray-600 mx-2 transition-all duration-300"
+							className="button text-gray-900 mx-2 transition-all duration-300"
 							alt="Botón información"
 							title="Botón información">
 							Acerca de
 						</a>
 						<a
 							href="#service"
-							className="button text-gray-600 mx-2 transition-all duration-300"
+							className="button text-gray-900 mx-2 transition-all duration-300"
 							alt="Botón servicios"
 							title="Botón servicios">
 							Servicios
 						</a>
 						<a
 							href="#testimonials"
-							className="button text-gray-600 mx-2 transition-all duration-300"
+							className="button text-gray-900 mx-2 transition-all duration-300"
 							alt="Botón testimonios"
 							title="Botón testimonios">
 							Testimonios
