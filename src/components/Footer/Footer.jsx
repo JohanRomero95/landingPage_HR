@@ -40,18 +40,18 @@ export default function Footer() {
 					className="max-md:hidden shadow-lg bg-blue-600 hover:bg-blue-700 text-white px-14 py-4 rounded-lg hover:rounded-3xl font-semibold transition-all duration-300 ease-in-out text-[16px] xs:hidden">
 					¡No esperes más!
 				</button>
-				<hr className="border-gray-600 my-8" />
+				<hr className="border-gray-600 xs:my-0 xs:py-4 my-8" />
 
 				<div className="flex flex-col md:flex-row justify-between items-center">
 					<div className="flex space-x-4 justify-center items-center xs:mb-5">
-						<a
+						{/* <a
 							href="https://www.instagram.com/ceciundurraga/"
 							target="_blank"
 							rel="noopener noreferrer"
 							aria-label="Ir a la página de Instagram"
 							title="Ir a la página de Instagram">
 							<FaInstagram className="text-2xl text-gray-600 hover:text-amber-900 transition-all duration-300 ease-in-out" />
-						</a>
+						</a> */}
 						<a
 							href="https://wa.me/56982690613"
 							target="_blank"

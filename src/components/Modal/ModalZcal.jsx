@@ -25,7 +25,6 @@ const ModalZcal = ({ call }) => {
 		};
 	}, []);
 
-	// Contenido del modal
 	const modalContent = (
 		<div
 			className="fixed inset-0 bg-black/50 flex items-center justify-center z-[10000]"
@@ -35,14 +34,12 @@ const ModalZcal = ({ call }) => {
 					isClosing ? "animate-zoom-out" : "animate-zoom-in"
 				}`}
 				onClick={(e) => e.stopPropagation()}>
-				{/* Botón de cerrar */}
 				<button
 					onClick={closeModal}
 					className="absolute top-8 right-8 xs:top-40 xs:right-10 md:w-16 md:h-16 text-gray-500 hover:text-gray-700 bg-gray-200 rounded-full w-12 h-12 hover:bg-gray-300">
 					X
 				</button>
 
-				{/* Contenedor del iframe */}
 				<iframe
 					src="https://zcal.co/i/pmHDjkhB?embed=1&embedType=iframe"
 					loading="lazy"
@@ -59,14 +56,12 @@ const ModalZcal = ({ call }) => {
 
 	return (
 		<div>
-			{/* Botón para abrir el modal */}
 			<button
 				onClick={openModal}
 				className="max-md:hidden shadow-lg bg-blue-600 hover:bg-blue-700 text-white px-14 py-4 rounded-lg hover:rounded-3xl font-semibold transition-all duration-300 ease-in-out text-[16px] xs:px-6 xs:py-3">
 				{call}
 			</button>
 
-			{/* Render del modal en el portal */}
 			{isModalOpen && ReactDOM.createPortal(modalContent, document.body)}
 		</div>
 	);

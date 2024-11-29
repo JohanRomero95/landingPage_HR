@@ -8,6 +8,7 @@ export default {
 		screens: {
 			xxs: { max: "399px" },
 			xs: { max: "634px" },
+			xxl: { min: "1440px" },
 			...defaultTheme.screens,
 		},
 	},

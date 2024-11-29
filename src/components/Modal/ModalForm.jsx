@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-// import { PiCalendar } from "react-icons/pi";
 
 const ModalForm = ({ isOpen, onClose }) => {
 	const modalRef = useRef(null);
@@ -53,7 +52,6 @@ const ModalForm = ({ isOpen, onClose }) => {
 					className="absolute top-20 right-10 text-gray-500 hover:text-gray-700 bg-gray-200 rounded-full w-12 h-12 hover:bg-gray-300">
 					X
 				</button>
-				{/* <PiCalendar /> */}
 			</aside>
 		</main>,
 		document.getElementById("modal-root"),

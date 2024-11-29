@@ -1,8 +1,6 @@
-import { Users } from "lucide-react";
-import "./Navbar.css";
 import { useState } from "react";
 import ModalForm from "../Modal/ModalForm";
-import logo from "../../assets/photos/CU_logo.png";
+import logo from "../../assets/photos/CU_logo.webp";
 import logo2 from "../../assets/photos/favicon.webp";
 
 export default function Navbar() {
@@ -29,7 +27,7 @@ export default function Navbar() {
 	};
 
 	return (
-		<nav className="fixed w-full bg-transparent backdrop-blur-lg z-50 pt-5 max-lg:backdrop-blur-0">
+		<nav className="fixed w-full bg-transparent xxs:backdrop-blur-none backdrop-blur-lg z-50 pt-5 max-lg:backdrop-blur-0">
 			<div className="container mx-auto px-6">
 				<div className="flex items-center justify-between rounded-2xl px-5 py-3 bg-white shadow-2xl">
 					<div
@@ -38,31 +36,38 @@ export default function Navbar() {
 						style={{ cursor: "pointer" }}>
 						<img
 							src={logo2}
-							className="w-7 h-7 xs:w-6 xs:h-6"
+							className="size-7 xs:w-6 xs:h-6"
 							alt="Logotipo"
 							title="Logotipo"
+							loading="lazy"
 						/>
-						<img src={logo} alt="Ceci Undurraga" title="Ceci Undurraga" />
+						<img
+							src={logo}
+							alt="Ceci Undurraga"
+							title="Ceci Undurraga"
+							className="w-36 h-[14px]"
+							loading="lazy"
+						/>
 					</div>
 
 					<div className="xs:hidden items-center md:gap-0 lg:gap-10 md:flex">
 						<a
 							href="#information"
-							className="button text-gray-900 mx-2 transition-all duration-300"
+							className="px-4 py-2 hover:bg-zinc-100 hover:rounded-3xl text-gray-900 mx-2 transition-all duration-300"
 							alt="Botón información"
 							title="Botón información">
 							Acerca de
 						</a>
 						<a
 							href="#service"
-							className="button text-gray-900 mx-2 transition-all duration-300"
+							className="px-4 py-2 hover:bg-zinc-100 hover:rounded-3xl text-gray-900 mx-2 transition-all duration-300"
 							alt="Botón servicios"
 							title="Botón servicios">
 							Servicios
 						</a>
 						<a
 							href="#testimonials"
-							className="button text-gray-900 mx-2 transition-all duration-300"
+							className="px-4 py-2 hover:bg-zinc-100 hover:rounded-3xl text-gray-900 mx-2 transition-all duration-300"
 							alt="Botón testimonios"
 							title="Botón testimonios">
 							Testimonios
