@@ -1,6 +1,6 @@
 import ModalZcal from "../Modal/ModalZcal";
 // import particle from "../../assets/photos/colorful-abstract-wave-on-transparent-background-png.webp";
-import foto1 from "../../assets/photos/home/_VBB3600.jpg";
+import foto1 from "../../assets/photos/home/_VBB3600.webp";
 import "animate.css";
 
 export default function Hero() {

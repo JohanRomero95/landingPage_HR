@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 // import foto4 from "../../assets/photos/2149328316_liviana.webp";
 // import ModalZcal from "../Modal/ModalZcal";
 import foto1 from "../../assets/photos/home/_VBB3681.jpg";
-import foto2 from "../../assets/photos/home/_VBB3653.jpg";
+import foto2 from "../../assets/photos/home/_VBB3653.webp";
 // import foto2 from "../../assets/photos/home/_VBB3559.jpg";
-import foto3 from "../../assets/photos/home/_VBB3597.jpg";
+import foto3 from "../../assets/photos/home/_VBB3597.webp";
 import ModalForm from "../Modal/ModalForm";
 
 const photos = [foto1, foto2, foto3];
