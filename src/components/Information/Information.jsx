@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
-import foto1 from "../../assets/photos/13053.webp";
-import foto2 from "../../assets/photos/liviana1.webp";
-import foto3 from "../../assets/photos/2148431344.jpg";
-import foto4 from "../../assets/photos/2149328316_liviana.webp";
+// import foto1 from "../../assets/photos/13053.webp";
+// import foto2 from "../../assets/photos/liviana1.webp";
+// import foto3 from "../../assets/photos/2148431344.jpg";
+// import foto4 from "../../assets/photos/2149328316_liviana.webp";
 // import ModalZcal from "../Modal/ModalZcal";
+import foto1 from "../../assets/photos/home/_VBB3681.jpg";
+import foto2 from "../../assets/photos/home/_VBB3653.jpg";
+// import foto2 from "../../assets/photos/home/_VBB3559.jpg";
+import foto3 from "../../assets/photos/home/_VBB3597.jpg";
 import ModalForm from "../Modal/ModalForm";
 
-const photos = [foto1, foto2, foto3, foto4];
+const photos = [foto1, foto2, foto3];
 
 const Information = () => {
 	// const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,7 +58,7 @@ const Information = () => {
 
 	return (
 		<section className="relative top-[90px] xs:top-0 xs:px-6">
-			<div className="xs:flex-col flex items-stretch gap-4 py-28 xs:py-14 md:py-14 md:px-[2em] lg:px-[2em] xl:px-[2em] xxl:px-[10em] 2xl:mx-[12em]">
+			<div className="xs:flex-col flex items-stretch gap-4 py-28 xs:py-14  md:px-[2em] lg:px-[2em] xl:px-[2em] xxl:px-[10em] 2xl:mx-[12em]">
 				<div className="w-[80%] xs:w-full">
 					<h1 className="text-[65px] text-gray-900 font-semibold mb-10 animate-fade-up animate-once animate-duration-[2000ms] animate-ease-in-out leading-tight xs:text-4xl xs:w-fit xs:mb-5 md:text-5xl">
 						El talento, mi norte.
@@ -80,8 +84,13 @@ const Information = () => {
 						alt="HR | People & Culture"
 						title="HR | People & Culture"
 						loading="lazy"
-						style={{ ...fadeStyle }}
-						className="absolute inset-0 w-full h-full rounded-3xl cursor-pointer object-cover "
+						style={{
+							...fadeStyle,
+						}}
+						className={`absolute inset-0 w-full h-full rounded-3xl cursor-pointer object-cover 
+        ${photos[currentIndex] === foto2 ? "object-[30%_25%]" : ""}
+        ${photos[currentIndex] === foto3 ? "object-[30%_15%]" : ""}
+    `}
 					/>
 				</div>
 			</div>
